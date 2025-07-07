@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Multi-Model AI Prompt Generator</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h1>Multi-Model AI Prompt Generator</h1>
+      <form>
+        <label for="model">Select Model:</label>
+        <select id="model">
+          <option>ChatGPT</option>
+          <option>Claude</option>
+          <option>Gemini</option>
+        </select>
+
+        <label for="prompt">Enter your prompt:</label>
+        <textarea id="prompt" rows="5" placeholder="Type something..."></textarea>
+
+        <button type="submit">Generate</button>
+      </form>
+
+      <div id="result" class="response-box"></div>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
+
+
